@@ -1278,3 +1278,15 @@ Cannot render console from 162.224.160.244! Allowed networks: 127.0.0.1, ::1, 12
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 162.224.160.244 at 2019-01-31 08:58:03 +0000
 Cannot render console from 162.224.160.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 162.224.160.244 at 2019-01-31 08:59:00 +0000
+Cannot render console from 162.224.160.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered posts/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 1.5ms)
