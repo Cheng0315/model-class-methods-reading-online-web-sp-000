@@ -1573,3 +1573,23 @@ Processing by PostsController#index as HTML
   [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 12]]
   Rendered posts/index.html.erb within layouts/application (3.5ms)
 Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 162.224.160.244 at 2019-01-31 09:29:13 +0000
+Cannot render console from 162.224.160.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <%= submit_tag "Filter" %>
+     9:   <% end %>
+    10: </div>
+    11: <% @posts.each do |post| %>
+    12:   <div>
+    13:     <h2><%= post.title %></h2>
+    14:     <h3>by: <%= link_to post.author.name, author_path(post.author) %></h3>
+  app/views/posts/index.html.erb:11:in `_app_views_posts_index_html_erb___4188611339175252267_70265163046980'
+
+
